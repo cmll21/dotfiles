@@ -1,0 +1,21 @@
+.DS_Store
+*.swp
+*.tmp
+*.log
+
+# Chezmoi
+.config/chezmoi/age-key.txt
+.local/share/chezmoi/secret_*
+.local/share/chezmoi/encrypted_*
+.tmp/
+
+# Secrets
+.env
+.env.*
+*.secret
+*.private
+
+# Editors
+.vscode/
+.idea/
+*.history/
