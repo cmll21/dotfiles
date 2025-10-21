@@ -1,4 +1,5 @@
 .DS_Store
+**/.DS_Store
 *.swp
 *.tmp
 *.log
@@ -19,5 +20,3 @@
 .vscode/
 .idea/
 *.history/
-.DS_Store
-**/.DS_Store
