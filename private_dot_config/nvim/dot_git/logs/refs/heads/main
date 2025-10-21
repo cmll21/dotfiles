@@ -1,8 +1,0 @@
-0000000000000000000000000000000000000000 7364d0101cb8b76beeb959a1f4246ec938b194ca Jacob Ng <ngjacob1@gmail.com> 1753339753 +1000	clone: from https://github.com/cmll21/nvim
-7364d0101cb8b76beeb959a1f4246ec938b194ca 0345fab5b598ea589296ed82f15a9cafda3532e5 Jacob Ng <ngjacob1@gmail.com> 1753339900 +1000	commit: made neogit floating
-0345fab5b598ea589296ed82f15a9cafda3532e5 8c68bf0d486da003b6f547caf4b38db8aab0e805 Jacob Ng <ngjacob1@gmail.com> 1753340087 +1000	commit: updated neogit
-8c68bf0d486da003b6f547caf4b38db8aab0e805 1627eaf34c27dd0e5a1d1043b62acabf89139604 Jacob Ng <ngjacob1@gmail.com> 1753376728 +1000	commit: modified terminal keybind
-1627eaf34c27dd0e5a1d1043b62acabf89139604 4c8d10307e40545606d91fcb83c72e66d6821813 Jacob Ng <ngjacob1@gmail.com> 1757094539 -0400	commit: added iron
-4c8d10307e40545606d91fcb83c72e66d6821813 1f281dddfa8799a37415460d87ee32d78f4e95d0 Jacob Ng <ngjacob1@gmail.com> 1757369193 -0400	commit: added r support
-1f281dddfa8799a37415460d87ee32d78f4e95d0 aee1d249e3f8b05bbe019e2e54134fa8f4530a01 Jacob Ng <ngjacob1@gmail.com> 1758133500 -0400	commit: commit before testing nvim-r
-aee1d249e3f8b05bbe019e2e54134fa8f4530a01 07dedee3565fce4822233e017a05900f0656f485 Jacob Ng <ngjacob1@gmail.com> 1758136119 -0400	commit: r.nvim semiworking
