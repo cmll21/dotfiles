@@ -2,9 +2,6 @@ theme = dark:catppuccin-mocha.conf,light:catppuccin-latte.conf
 font-family = Monaspace Neon NF
 font-feature = 'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'
 
-background-opacity = 0.7
-background-blur-radius = 20
-
 macos-option-as-alt = left
 keybind = alt+left=unbind
 keybind = alt+right=unbind

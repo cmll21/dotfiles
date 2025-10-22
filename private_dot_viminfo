@@ -12,7 +12,7 @@
 ~h
 # Command Line History (newest to oldest):
 :q
-|2,0,1761058558,,"q"
+|2,0,1761103913,,"q"
 :q!
 |2,0,1753192272,,"q!"
 :action RecentFiles
@@ -85,6 +85,30 @@
 |4,39,1,0,1761058550,"~/.config/chezmoi/chezmoi.toml"
 -'  1  0  ~/.config/chezmoi/chezmoi.toml
 |4,39,1,0,1761058550,"~/.config/chezmoi/chezmoi.toml"
+-'  1  0  ~/.config/chezmoi/chezmoi.toml
+|4,39,1,0,1761058550,"~/.config/chezmoi/chezmoi.toml"
+-'  1  0  ~/.config/chezmoi/chezmoi.toml
+|4,39,1,0,1761058550,"~/.config/chezmoi/chezmoi.toml"
+-'  1  0  ~/.config/chezmoi/chezmoi.toml
+|4,39,1,0,1761058550,"~/.config/chezmoi/chezmoi.toml"
+-'  1  0  ~/.config/chezmoi/chezmoi.toml
+|4,39,1,0,1761058550,"~/.config/chezmoi/chezmoi.toml"
+-'  1  0  ~/.config/chezmoi/chezmoi.toml
+|4,39,1,0,1761058550,"~/.config/chezmoi/chezmoi.toml"
+-'  1  0  ~/.config/chezmoi/chezmoi.toml
+|4,39,1,0,1761058550,"~/.config/chezmoi/chezmoi.toml"
+-'  4  0  ~/.config/chezmoi/chezmoi.toml
+|4,39,4,0,1761058538,"~/.config/chezmoi/chezmoi.toml"
+-'  4  0  ~/.config/chezmoi/chezmoi.toml
+|4,39,4,0,1761058538,"~/.config/chezmoi/chezmoi.toml"
+-'  4  0  ~/.config/chezmoi/chezmoi.toml
+|4,39,4,0,1761058538,"~/.config/chezmoi/chezmoi.toml"
+-'  4  0  ~/.config/chezmoi/chezmoi.toml
+|4,39,4,0,1761058538,"~/.config/chezmoi/chezmoi.toml"
+-'  4  0  ~/.config/chezmoi/chezmoi.toml
+|4,39,4,0,1761058538,"~/.config/chezmoi/chezmoi.toml"
+-'  4  0  ~/.config/chezmoi/chezmoi.toml
+|4,39,4,0,1761058538,"~/.config/chezmoi/chezmoi.toml"
 -'  4  0  ~/.config/chezmoi/chezmoi.toml
 |4,39,4,0,1761058538,"~/.config/chezmoi/chezmoi.toml"
 -'  4  0  ~/.config/chezmoi/chezmoi.toml
@@ -105,6 +129,102 @@
 |4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
 -'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
 |4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  2  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,2,0,1753192272,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
+|4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
 -'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
 |4,39,1,0,1753192260,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI"
 -'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshe0mKTI
@@ -153,132 +273,12 @@
 |4,39,1,0,1753192190,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshlEXdjQ"
 -'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshlEXdjQ
 |4,39,1,0,1753192190,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshlEXdjQ"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
--'  1  22  ~/.config/nvim/.git/COMMIT_EDITMSG
-|4,39,1,22,1753024595,"~/.config/nvim/.git/COMMIT_EDITMSG"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshlEXdjQ
+|4,39,1,0,1753192190,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshlEXdjQ"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshlEXdjQ
+|4,39,1,0,1753192190,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshlEXdjQ"
+-'  1  0  /private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshlEXdjQ
+|4,39,1,0,1753192190,"/private/var/folders/kw/261sgsqs11d139pzh8pcbj9c0000gn/T/zshlEXdjQ"
 
 # History of marks within files (newest to oldest):
 
