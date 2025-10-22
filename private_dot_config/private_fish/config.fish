@@ -8,6 +8,9 @@ set -x PATH /opt/homebrew/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin $HOME
 # Set default editor
 set -x EDITOR nvim
 
+# Set greeting
+set fish_greeting # "Welcome back, $(whoami)! Today is $(date '+%A, %B %d, %Y')."
+
 # C headers and libs
 set -x CPATH /opt/homebrew/include $CPATH
 set -x LIBRARY_PATH /opt/homebrew/lib $LIBRARY_PATH
