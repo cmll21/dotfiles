@@ -14,3 +14,27 @@ chezmoi's naming rules (for example `dot_` for home-directory files and
   updates.
 - Run `chezmoi apply` after confirming the changes look correct.
 - Use `chezmoi add <path>` to bring unmanaged files under chezmoi control.
+
+## Packages
+
+`run_once_install-packages.sh` ensures the following tools are installed across
+supported platforms:
+
+- eza
+- zoxide
+- fish
+- fzf
+- ripgrep
+- bat
+- neovim
+- git
+- fd
+- jq
+- curl
+- wget
+- tldr
+- tree
+- htop
+- oh-my-posh
+- lazygit
+- gh
