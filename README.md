@@ -1,6 +1,6 @@
 # Dotfiles
 
-This directory stores the chezmoi source for local dotfiles. See [chezmoi.io](url) for more details.
+This directory stores the chezmoi source for local dotfiles. See [https://chezmoi.io](url) for more details.
 
 ## Bootstrap
 
