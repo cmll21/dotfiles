@@ -1,4 +1,4 @@
-# Dotfiles managed by chezmoi
+# Dotfiles
 
 This directory stores the chezmoi source for local dotfiles. Files obey
 chezmoi's naming rules (for example `dot_` for home-directory files and
@@ -6,9 +6,7 @@ chezmoi's naming rules (for example `dot_` for home-directory files and
 
 ## Bootstrap
 
-1. Install chezmoi following the instructions at https://www.chezmoi.io/.
-2. Run `chezmoi init --apply $GITHUB_USERNAME` to clone this repo and deploy the
-   dotfiles in one step.
+1. Run `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply cmll21`.
 
 ## Making changes
 
