@@ -1,8 +1,6 @@
 # Dotfiles
 
-This directory stores the chezmoi source for local dotfiles. Files obey
-chezmoi's naming rules (for example `dot_` for home-directory files and
-`private_` for secrets).
+This directory stores the chezmoi source for local dotfiles. See [chezmoi.io](url) for more details.
 
 ## Bootstrap
 
