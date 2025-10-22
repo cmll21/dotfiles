@@ -1,9 +1,8 @@
 # Dotfiles
 
 This repository contains my personal dotfile configuration, managed by [chezmoi](https://chezmoi.io).
-
-<img width="1344" height="924" alt="Screenshot 2025-10-22 at 2 24 17 am" src="https://github.com/user-attachments/assets/bb437e18-fc50-4ba7-b37f-364e391c10c6" />
-
+<img width="1552" height="981" alt="Screenshot 2025-10-22 at 2 35 28 am" src="https://github.com/user-attachments/assets/4c432615-5011-4d6f-b3ea-bd96553d2501" />
+<img width="1552" height="981" alt="Screenshot 2025-10-22 at 2 33 44 am" src="https://github.com/user-attachments/assets/df80bff7-2e8f-45ac-be14-c4ad627fec23" />
 ## Bootstrap
 
 1. Run `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply cmll21`.
