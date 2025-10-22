@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-COMMON_DEPS="eza zoxide fish fzf ripgrep bat neovim git fd jq curl wget tldr tree htop oh-my-posh lazygit gh"
+COMMON_DEPS="eza zoxide fish fzf ripgrep bat neovim git curl wget tldr tree htop oh-my-posh lazygit gh"
 
 install_deps() {
   local package_manager=$1
