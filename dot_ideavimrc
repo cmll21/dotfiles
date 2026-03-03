@@ -34,3 +34,128 @@ Plug 'tpope/vim-commentary'
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
+
+" ── Leader key mappings ──────────────────────────────────────────────────────
+
+" ── SPC SPC / SPC / / SPC ; / SPC ' / SPC TAB / SPC , ──────────────────────
+map <leader><space> <Action>(GotoAction)
+map <leader>/ <Action>(FindInPath)
+map <leader><Tab> <C-^>
+map <leader>, <Action>(RecentFiles)
+nmap <leader>; gcc
+vmap <leader>; gc
+map <leader>' <Action>(ActivateTerminalToolWindow)
+
+" ── SPC b — Buffers ──────────────────────────────────────────────────────────
+map <leader>bb <Action>(RecentFiles)
+map <leader>bd <Action>(CloseContent)
+map <leader>bn :bnext<CR>
+map <leader>bp :bprev<CR>
+map <leader>bR :e<CR>
+
+" ── SPC c — Code/LSP ─────────────────────────────────────────────────────────
+map <leader>cd <Action>(GotoDeclaration)
+map <leader>cgr <Action>(FindUsages)
+map <leader>ci <Action>(GotoImplementation)
+map <leader>ch <Action>(QuickJavaDoc)
+map <leader>crn <Action>(RenameElement)
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cf <Action>(ReformatCode)
+map gd <Action>(GotoDeclaration)
+map gr <Action>(FindUsages)
+map gi <Action>(GotoImplementation)
+map K <Action>(QuickJavaDoc)
+
+" ── SPC e — Errors/Diagnostics ───────────────────────────────────────────────
+map <leader>en <Action>(GotoNextError)
+map <leader>ep <Action>(GotoPreviousError)
+map <leader>eN <Action>(GotoPreviousError)
+map <leader>ee <Action>(ShowErrorDescription)
+map <leader>ef <Action>(ShowIntentionActions)
+map <leader>el <Action>(ActivateProblemsViewToolWindow)
+
+" ── SPC f — Files ─────────────────────────────────────────────────────────────
+map <leader>ff <Action>(GotoFile)
+map <leader>fg <Action>(GotoFile)
+map <leader>fr <Action>(RecentFiles)
+map <leader>fs :w<CR>
+map <leader>fS :wa<CR>
+map <leader>ft <Action>(ActivateProjectToolWindow)
+map <leader>fT <Action>(SelectInProjectView)
+map <leader>fn :enew<CR>
+
+" ── SPC g — Git ───────────────────────────────────────────────────────────────
+map <leader>gs <Action>(ActivateVersionControlToolWindow)
+map <leader>gb <Action>(Annotate)
+map <leader>gd <Action>(Compare.SameVersion)
+map <leader>gl <Action>(Vcs.ShowTabbedFileHistory)
+
+" ── SPC i — Insert ───────────────────────────────────────────────────────────
+map <leader>ij o<Esc>
+map <leader>ik O<Esc>
+
+" ── SPC j — Jump ─────────────────────────────────────────────────────────────
+map <leader>ji <Action>(FileStructurePopup)
+map <leader>jI <Action>(GotoSymbol)
+map <leader>j= <Action>(ReformatCode)
+
+" ── SPC p — Project ──────────────────────────────────────────────────────────
+map <leader>pp <Action>(RecentFiles)
+map <leader>pf <Action>(GotoFile)
+map <leader>ps <Action>(FindInPath)
+map <leader>pt <Action>(ActivateProjectToolWindow)
+
+" ── SPC q — Quit ─────────────────────────────────────────────────────────────
+map <leader>qq :q<CR>
+map <leader>qQ :qa!<CR>
+map <leader>qs :wa \| qa<CR>
+
+" ── SPC s — Search/Symbol ────────────────────────────────────────────────────
+map <leader>sp <Action>(FindInPath)
+map <leader>ss <Action>(FindInPath)
+map <leader>sj <Action>(FileStructurePopup)
+map <leader>sJ <Action>(GotoSymbol)
+map <leader>sr <Action>(FindUsages)
+map <leader>se <Action>(RenameElement)
+map <leader>sh <Action>(HighlightUsagesInFile)
+map <leader>sc :noh<CR>
+
+" ── SPC t — Toggles ──────────────────────────────────────────────────────────
+map <leader>tl :set wrap!<CR>
+map <leader>tz <Action>(ToggleDistractionFreeMode)
+map <leader>tn :set number! relativenumber!<CR>
+map <leader>tw :set list!<CR>
+
+" ── SPC w — Windows ──────────────────────────────────────────────────────────
+map <leader>wh <C-w>h
+map <leader>wj <C-w>j
+map <leader>wk <C-w>k
+map <leader>wl <C-w>l
+map <leader>ws <C-w>s
+map <leader>w- <C-w>s
+map <leader>wv <C-w>v
+map <leader>w/ <C-w>v
+map <leader>wd <C-w>c
+map <leader>wm <Action>(MaximizeEditorInSplit)
+map <leader>w= <C-w>=
+map <leader>ww <C-w>w
+map <leader>wW <C-w>W
+
+" ── SPC x — Text operations ──────────────────────────────────────────────────
+nmap <leader>xu guu
+nmap <leader>xU gUU
+vmap <leader>xu gu
+vmap <leader>xU gU
+map <leader>xJ :m +1<CR>
+map <leader>xK :m -2<CR>
+vmap <leader>xJ :m '>+1<CR>gv=gv
+vmap <leader>xK :m '<-2<CR>gv=gv
+map <leader>xi <Action>(OptimizeImports)
+map <leader>xr <Action>(RenameElement)
+
+" ── SPC z — Folds ────────────────────────────────────────────────────────────
+map <leader>zm zM
+map <leader>zr zR
+map <leader>za za
+map <leader>zo zo
+map <leader>zc zc
