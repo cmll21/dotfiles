@@ -19,11 +19,6 @@ set -x LIBRARY_PATH /opt/homebrew/lib $LIBRARY_PATH
 # Install with: fisher install jorgebucaran/nvm.fish
 set -x NVM_DIR $HOME/.nvm
 
-# Opam init (silently)
-if test -r "$HOME/.opam/opam-init/init.fish"
-    source "$HOME/.opam/opam-init/init.fish" > /dev/null 2>&1
-end
-
 # Oh My Posh (only outside Apple Terminal)
 if test "$TERM_PROGRAM" != "Apple_Terminal"
     oh-my-posh init fish --config "$HOME/.config/oh-my-posh/zen.omp.toml" | source
