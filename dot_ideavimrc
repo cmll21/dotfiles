@@ -15,6 +15,7 @@ set scrolloff=5
 set incsearch
 
 set which-key
+set notimeout
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -54,6 +55,15 @@ map <leader>bd <Action>(CloseContent)
 map <leader>bn :bnext<CR>
 map <leader>bp :bprev<CR>
 map <leader>bR :e<CR>
+map <leader>b1 <Action>(GoToTab1)
+map <leader>b2 <Action>(GoToTab2)
+map <leader>b3 <Action>(GoToTab3)
+map <leader>b4 <Action>(GoToTab4)
+map <leader>b5 <Action>(GoToTab5)
+map <leader>b6 <Action>(GoToTab6)
+map <leader>b7 <Action>(GoToTab7)
+map <leader>b8 <Action>(GoToTab8)
+map <leader>b9 <Action>(GoToTab9)
 
 " ── SPC c — Code/LSP ─────────────────────────────────────────────────────────
 map <leader>cd <Action>(GotoDeclaration)
