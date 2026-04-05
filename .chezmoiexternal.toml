@@ -1,5 +1,0 @@
-["~/.config/nvim"]
-type = "git-repo"
-url = "https://github.com/cmll21/nvim.git"
-# refreshPeriod determines how often chezmoi pulls updates automatically
-refreshPeriod = "168h"  # refresh every 7 days
