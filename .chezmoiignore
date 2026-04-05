@@ -5,3 +5,4 @@
 *.tmp
 .viminfo
 .config/nvim/lazy-lock.json
+**/*.bak
