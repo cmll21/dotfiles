@@ -3,3 +3,9 @@
 -- Add any additional options here
 
 vim.g.snacks_animate = false
+
+vim.filetype.add({
+  extension = {
+    h = "c",
+  },
+})
