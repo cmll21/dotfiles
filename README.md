@@ -33,3 +33,4 @@ supported platforms:
 - [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh)
 - [gh](https://github.com/cli/cli)
 - make
+- [tmux](https://github.com/tmux/tmux)
