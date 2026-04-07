@@ -3,6 +3,8 @@
 *.swp
 *.tmp
 *.log
+*.bak
+dot_DS_Store
 
 # Chezmoi
 .config/chezmoi/age-key.txt

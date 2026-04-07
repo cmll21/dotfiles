@@ -1,0 +1,76 @@
+case $- in
+    *i*) ;;
+    *) return ;;
+esac
+
+# History
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=1000
+SAVEHIST=2000
+setopt APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
+setopt PROMPT_SUBST
+
+# Completion
+autoload -Uz compinit
+compinit
+
+# Prompt fallback for systems without oh-my-posh
+autoload -Uz colors
+colors
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+zsh_git_prompt() {
+    git rev-parse --is-inside-work-tree > /dev/null 2>&1 || return
+    local branch
+    branch=$(git branch --show-current 2>/dev/null)
+    if [ -z "$branch" ]; then
+        branch=$(git rev-parse --short HEAD 2>/dev/null)
+    fi
+    if [ -n "$(git status --porcelain 2>/dev/null)" ]; then
+        print -r " ${branch}*"
+    else
+        print -r " ${branch}"
+    fi
+}
+
+set_zsh_prompt() {
+    local exit_code=$?
+    local prompt_symbol
+    if [ "$exit_code" -eq 0 ]; then
+        prompt_symbol='%F{magenta}❯%f'
+    else
+        prompt_symbol='%F{red}❯%f'
+    fi
+    PROMPT='${debian_chroot:+($debian_chroot)}%F{blue}%~%F{242}$(zsh_git_prompt)%f
+'"${prompt_symbol}"' '
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd set_zsh_prompt
+case "$TERM" in
+    xterm*|rxvt*)
+        precmd_title() {
+            print -Pn "\e]0;${debian_chroot:+($debian_chroot)}%n@%m: %~\a"
+        }
+        add-zsh-hook precmd precmd_title
+        ;;
+esac
+
+if [ -r "$HOME/.shell_common" ]; then
+    . "$HOME/.shell_common"
+fi
+
+export NVM_DIR="$HOME/.nvm"
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+    . "$NVM_DIR/nvm.sh"
+fi
+
+if [ -r "$HOME/.opam/opam-init/init.zsh" ]; then
+    . "$HOME/.opam/opam-init/init.zsh" > /dev/null 2>&1
+fi
+
+bindkey -v
+export KEYTIMEOUT=5

@@ -1,0 +1,83 @@
+# Sourced by .bashrc and .zshrc - keep POSIX-compatible syntax
+
+# PATH
+path_prepend() {
+    case ":$PATH:" in
+        *":$1:"*) ;;
+        *) PATH="$1:$PATH" ;;
+    esac
+}
+
+path_prepend /sbin
+path_prepend /usr/sbin
+path_prepend /bin
+path_prepend /usr/bin
+path_prepend /usr/local/bin
+path_prepend "$HOME/.local/bin"
+if [ -d "/opt/homebrew/bin" ]; then
+    path_prepend /opt/homebrew/bin
+fi
+export PATH
+
+# Editor
+export EDITOR=nvim
+
+# Shell-specific initializers
+if [ -n "${ZSH_VERSION:-}" ]; then
+    shell_name=zsh
+elif [ -n "${BASH_VERSION:-}" ]; then
+    shell_name=bash
+else
+    shell_name=sh
+fi
+
+# Zoxide
+if command -v zoxide > /dev/null 2>&1; then
+    case "$shell_name" in
+        bash|zsh)
+            eval "$(zoxide init "$shell_name")"
+            alias cd='z'
+            ;;
+    esac
+fi
+
+# Oh My Posh
+if command -v oh-my-posh > /dev/null 2>&1; then
+    case "$shell_name" in
+        zsh)
+            eval "$(oh-my-posh init "$shell_name" --config "$HOME/.config/oh-my-posh/zen.omp.toml")"
+            ;;
+        bash)
+            if [ "${BASH_VERSINFO:-0}" -ge 4 ]; then
+                eval "$(oh-my-posh init "$shell_name" --config "$HOME/.config/oh-my-posh/zen.omp.toml")"
+            fi
+            ;;
+    esac
+fi
+
+# Rust
+if [ -f "$HOME/.cargo/env" ]; then
+    . "$HOME/.cargo/env"
+fi
+
+# Aliases
+if command -v eza > /dev/null 2>&1; then
+    alias ls='eza --icons --group-directories-first --color=always'
+    alias ll='eza -lh --icons --group-directories-first --git'
+    alias la='eza -lha --icons --group-directories-first --git'
+    alias lt='eza --tree --level=2 --icons'
+fi
+if command -v rg > /dev/null 2>&1; then
+    alias grep='rg'
+fi
+if ! command -v fd > /dev/null 2>&1 && command -v fdfind > /dev/null 2>&1; then
+    alias fd='fdfind'
+fi
+if command -v bat > /dev/null 2>&1; then
+    alias cat='bat'
+elif command -v batcat > /dev/null 2>&1; then
+    alias cat='batcat'
+fi
+
+unset shell_name
+unset -f path_prepend

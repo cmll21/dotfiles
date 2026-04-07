@@ -1,0 +1,58 @@
+# Enable Vi mode
+fish_vi_key_bindings
+functions -e fish_mode_prompt
+
+# Setup PATH
+{{ if eq .chezmoi.os "darwin" -}}
+set -x PATH /opt/homebrew/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin $HOME/.local/bin
+{{- else -}}
+set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin $HOME/.local/bin
+{{- end }}
+
+# Set default editor
+set -x EDITOR nvim
+
+# Set greeting
+set fish_greeting # "Welcome back, $(whoami)! Today is $(date '+%A, %B %d, %Y')."
+
+# C headers and libs (macOS/Homebrew only)
+{{ if eq .chezmoi.os "darwin" -}}
+set -x CPATH /opt/homebrew/include $CPATH
+set -x LIBRARY_PATH /opt/homebrew/lib $LIBRARY_PATH
+{{- end }}
+
+# NVM — Use Fish-native plugin instead of Bash scripts
+# Install with: fisher install jorgebucaran/nvm.fish
+set -x NVM_DIR $HOME/.nvm
+
+# Oh My Posh (only outside Apple Terminal)
+if command -q oh-my-posh; and test "$TERM_PROGRAM" != "Apple_Terminal"
+    oh-my-posh init fish --config "$HOME/.config/oh-my-posh/zen.omp.toml" | source
+end
+
+# Zoxide directory jumper
+if command -q zoxide
+    zoxide init fish | source
+end
+
+# Aliases
+if command -q zoxide
+    alias cd='z'
+end
+if command -q eza
+    alias ls='eza --icons --group-directories-first --color=always'
+    alias ll='eza -lh --icons --group-directories-first --git'
+    alias la='eza -lha --icons --group-directories-first --git'
+    alias lt='eza --tree --level=2 --icons'
+end
+if command -q rg
+    alias grep='rg'
+end
+if not command -q fd; and command -q fdfind
+    alias fd='fdfind'
+end
+if command -q bat
+    alias cat='bat'
+else if command -q batcat
+    alias cat='batcat'
+end

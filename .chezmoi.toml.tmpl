@@ -1,0 +1,4 @@
+{{- $has_sudo := promptBoolOnce . "has_sudo" "Do you have sudo/root access on this machine?" -}}
+
+[data]
+    has_sudo = {{ $has_sudo }}

@@ -28,12 +28,8 @@ supported platforms:
 - [neovim](https://github.com/neovim/neovim)
 - [git](https://github.com/git/git)
 - [fd](https://github.com/sharkdp/fd)
-- [jq](https://github.com/jqlang/jq)
 - [curl](https://github.com/curl/curl)
-- [wget](https://github.com/mirror/wget)
-- [tldr](https://github.com/tldr-pages/tldr)
-- [tree](https://github.com/Old-Man-Programmer/tree)
 - [htop](https://github.com/htop-dev/htop)
 - [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh)
-- [lazygit](https://github.com/jesseduffield/lazygit)
 - [gh](https://github.com/cli/cli)
+- make

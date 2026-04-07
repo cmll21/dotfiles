@@ -1,0 +1,135 @@
+#!/bin/bash
+set -e
+
+BREW_DEPS="eza zoxide fish fzf ripgrep bat neovim git fd curl htop oh-my-posh gh make"
+APT_DEPS="zoxide fish fzf ripgrep bat neovim git fd-find curl htop gh gpg unzip make"
+
+install_deps() {
+  local package_manager=$1
+  local packages=$2
+
+  echo "🔧 Installing core dependencies via $package_manager..."
+
+  case "$package_manager" in
+    "brew")
+      if ! command -v brew &>/dev/null; then
+        echo "🍺 Installing Homebrew..."
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      fi
+
+      if [ -x /opt/homebrew/bin/brew ]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+      elif [ -x /usr/local/bin/brew ]; then
+        eval "$(/usr/local/bin/brew shellenv)"
+      elif [ -x "$HOME/.linuxbrew/bin/brew" ]; then
+        eval "$("$HOME/.linuxbrew/bin/brew" shellenv)"
+      fi
+
+      for pkg in $packages; do
+        if ! brew list "$pkg" &>/dev/null; then
+          echo "→ Installing $pkg"
+          brew install "$pkg"
+        else
+          echo "✓ $pkg already installed"
+        fi
+      done
+      ;;
+    "apt")
+      if ! command -v apt &>/dev/null; then
+        echo "⚠️  apt is not available on this Linux distribution; skipping apt packages"
+        return
+      fi
+
+      echo "📦 Updating package lists..."
+      sudo apt update -y
+
+      for pkg in $packages; do
+        if ! apt-cache show "$pkg" &>/dev/null; then
+          echo "⚠️  $pkg is not available from configured apt repositories; skipping"
+          continue
+        fi
+
+        if ! dpkg -s "$pkg" &>/dev/null; then
+          echo "→ Installing $pkg"
+          if ! sudo apt install -y "$pkg"; then
+            echo "⚠️  Failed to install $pkg; continuing"
+          fi
+        else
+          echo "✓ $pkg already installed"
+        fi
+      done
+      ;;
+    *)
+      echo "❌ Unsupported package manager: $package_manager"
+      exit 1
+      ;;
+  esac
+}
+
+install_eza_apt() {
+  if ! command -v apt &>/dev/null; then
+    echo "⚠️  apt is not available; skipping eza apt install"
+    return
+  fi
+
+  if command -v eza &>/dev/null; then
+    echo "✓ eza already installed"
+    return
+  fi
+
+  if ! apt-cache show eza &>/dev/null; then
+    echo "→ Adding eza apt repository"
+    sudo mkdir -p /etc/apt/keyrings
+    curl -fsSL https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+    echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list >/dev/null
+    sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+    sudo apt update -y
+  fi
+
+  echo "→ Installing eza"
+  if ! sudo apt install -y eza; then
+    echo "⚠️  Failed to install eza; continuing"
+  fi
+}
+
+install_oh_my_posh_linux() {
+  if command -v oh-my-posh &>/dev/null; then
+    echo "✓ oh-my-posh already installed"
+    return
+  fi
+
+  echo "→ Installing oh-my-posh"
+  mkdir -p "$HOME/.local/bin"
+  if ! curl -fsSL https://ohmyposh.dev/install.sh -o /tmp/oh-my-posh-install.sh; then
+    echo "⚠️  Failed to download oh-my-posh installer; continuing"
+    return
+  fi
+  if ! bash /tmp/oh-my-posh-install.sh -d "$HOME/.local/bin"; then
+    echo "⚠️  Failed to install oh-my-posh; continuing"
+  fi
+  rm -f /tmp/oh-my-posh-install.sh
+}
+
+os=$(uname -s)
+
+if [[ "$os" == "Darwin" ]]; then
+  echo "🍏 Setting up macOS dependencies..."
+  install_deps "brew" "$BREW_DEPS"
+elif [[ "$os" == "Linux" ]] || grep -qi microsoft /proc/version 2>/dev/null; then
+{{ if (index . "has_sudo") -}}
+  echo "🐧 Setting up Linux dependencies..."
+  install_deps "apt" "$APT_DEPS"
+  install_eza_apt
+  install_oh_my_posh_linux
+{{- else }}
+  echo "⚠️  No sudo access — skipping package installation."
+  echo "Install these packages manually when you have access:"
+  echo "  $APT_DEPS"
+  echo "  eza"
+  install_oh_my_posh_linux
+{{- end }}
+else
+  echo "⚠️ Unsupported OS detected: $os"
+fi
+
+echo "✅ Setup complete! Make sure your shell is set to fish and configured properly."
