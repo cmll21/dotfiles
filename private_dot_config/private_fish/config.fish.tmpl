@@ -1,5 +1,16 @@
 # Enable Vi mode
-fish_vi_key_bindings
+if status is-interactive
+    # Enable Vim key bindings
+    fish_vi_key_bindings
+
+    # Configure cursor shapes for each mode
+    set -g fish_cursor_default block # Normal mode
+    set -g fish_cursor_insert line # Insert mode
+    set -g fish_cursor_replace_one underscore # Replace mode (single char)
+    set -g fish_cursor_replace underscore # Replace mode
+    set -g fish_cursor_visual block # Visual mode
+end
+
 functions -e fish_mode_prompt
 
 # Setup PATH
@@ -28,17 +39,19 @@ set -x LIBRARY_PATH /opt/homebrew/lib $LIBRARY_PATH
 # Install with: fisher install jorgebucaran/nvm.fish
 set -x NVM_DIR $HOME/.nvm
 
-# Oh My Posh (only outside Apple Terminal)
-if command -q oh-my-posh; and test "$TERM_PROGRAM" != "Apple_Terminal"
-    oh-my-posh init fish --config "$HOME/.config/oh-my-posh/zen.omp.toml" | source
-end
-
 # Zoxide directory jumper
 if command -q zoxide
     zoxide init fish | source
 end
 
+# Theme
+fish_config theme choose catppuccin-mocha --color-theme=dark
+
+# Prompt
+starship init fish | source
+
 # Aliases
+alias c='claude'
 if command -q zoxide
     alias cd='z'
 end
@@ -49,13 +62,22 @@ if command -q eza
     alias lt='eza --tree --level=2 --icons'
 end
 if command -q rg
-    alias grep='rg'
+    abbr -a grep rg
 end
 if not command -q fd; and command -q fdfind
-    alias fd='fdfind'
+    abbr -a fd fdfind
 end
 if command -q bat
-    alias cat='bat'
+    abbr -a cat bat
 else if command -q batcat
-    alias cat='batcat'
+    abbr -a cat batcat
+end
+
+# oh-my-zsh style navigation
+abbr -a .. 'cd ..'
+abbr -a ... 'cd ../..'
+abbr -a .... 'cd ../../..'
+abbr -a ..... 'cd ../../../..'
+for i in (seq 1 9)
+    abbr -a $i "prevd $i"
 end

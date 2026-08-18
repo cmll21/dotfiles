@@ -109,3 +109,4 @@ bind 'set keyseq-timeout 50'
 if command -v notify-send > /dev/null 2>&1; then
     alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history | tail -n1 | sed -e '\''s/^[[:space:]]*[0-9]\+[[:space:]]*//;s/[;&|][[:space:]]*alert$//'\'')"'
 fi
+. "$HOME/.cargo/env"
