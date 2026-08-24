@@ -1,0 +1,31 @@
+[user]
+	name = Jacob Ng
+	email = ngjacob1@gmail.com
+[core]
+	editor = nvim
+	pager = delta
+  autocrlf = input
+[init]
+	defaultBranch = main
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	dark = true
+  side-by-side = true
+  syntax-theme = Catppuccin Mocha
+[merge]
+	conflictStyle = zdiff3
+[diff]
+  colorMoved = default
+  algorithm = histogram
+[pull]
+  rebase = true
+[rebase]
+  autoStash = true
+[push]
+  default = current
+[fetch]
+  prune = true
+[rerere]
+  enabled = true

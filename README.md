@@ -16,8 +16,9 @@ This repository contains my personal dotfile configuration, managed by [chezmoi]
 
 ## Packages
 
-`run_once_install-packages.sh` ensures the following tools are installed across
-supported platforms:
+`run_once_after_install-packages.sh` ensures the following tools are installed
+across supported platforms, then installs [fisher](https://github.com/jorgebucaran/fisher)
+and the plugins listed in `fish_plugins`:
 
 - [eza](https://github.com/eza-community/eza)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
@@ -30,7 +31,7 @@ supported platforms:
 - [fd](https://github.com/sharkdp/fd)
 - [curl](https://github.com/curl/curl)
 - [htop](https://github.com/htop-dev/htop)
-- [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh)
 - [gh](https://github.com/cli/cli)
 - make
 - [tmux](https://github.com/tmux/tmux)
+- [starship](https://github.com/starship/starship)

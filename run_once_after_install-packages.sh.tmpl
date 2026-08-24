@@ -1,0 +1,73 @@
+#!/bin/bash
+set -e
+
+BREW_DEPS="eza zoxide fish fzf ripgrep bat neovim git fd curl htop gh make tmux starship"
+
+install_deps() {
+  local packages=$1
+
+  if ! command -v brew &>/dev/null; then
+    echo "🍺 Installing Homebrew..."
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+
+  if [ -x /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  elif [ -x /usr/local/bin/brew ]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+  elif [ -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  fi
+
+  echo "🔧 Installing core dependencies via brew..."
+  for pkg in $packages; do
+    if ! brew list "$pkg" &>/dev/null; then
+      echo "→ Installing $pkg"
+      brew install "$pkg"
+    else
+      echo "✓ $pkg already installed"
+    fi
+  done
+}
+
+install_fisher_plugins() {
+  if ! command -v fish &>/dev/null; then
+    echo "⚠️  fish not found; skipping fisher plugin setup"
+    return
+  fi
+
+  if ! fish -c "functions -q fisher" &>/dev/null; then
+    echo "🎣 Installing fisher..."
+    if ! fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"; then
+      echo "⚠️  Failed to install fisher; skipping plugin setup"
+      return
+    fi
+  fi
+
+  echo "🎣 Installing fisher plugins from fish_plugins..."
+  if ! fish -c "fisher update"; then
+    echo "⚠️  Failed to install fisher plugins; continuing"
+  fi
+}
+
+os=$(uname -s)
+
+if [[ "$os" == "Darwin" ]]; then
+  echo "🍏 Setting up macOS dependencies..."
+  install_deps "$BREW_DEPS"
+elif [[ "$os" == "Linux" ]] || grep -qi microsoft /proc/version 2>/dev/null; then
+{{ if (index . "has_sudo") -}}
+  echo "🐧 Setting up Linux dependencies via Homebrew..."
+  install_deps "$BREW_DEPS"
+{{- else }}
+  echo "⚠️  No sudo access — skipping package installation (Homebrew's first-time Linux install needs sudo)."
+  echo "Install these packages manually when you have access, e.g. via Homebrew (https://brew.sh):"
+  echo "  $BREW_DEPS"
+{{- end }}
+else
+  echo "⚠️ Unsupported OS detected: $os"
+fi
+
+install_fisher_plugins
+
+echo "✅ Setup complete! Make sure your shell is set to fish and configured properly."

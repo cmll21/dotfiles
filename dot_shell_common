@@ -17,6 +17,9 @@ path_prepend "$HOME/.local/bin"
 if [ -d "/opt/homebrew/bin" ]; then
     path_prepend /opt/homebrew/bin
 fi
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
+    path_prepend /home/linuxbrew/.linuxbrew/bin
+fi
 export PATH
 
 # Editor
@@ -36,21 +39,15 @@ if command -v zoxide > /dev/null 2>&1; then
     case "$shell_name" in
         bash|zsh)
             eval "$(zoxide init "$shell_name")"
-            alias cd='z'
             ;;
     esac
 fi
 
-# Oh My Posh
-if command -v oh-my-posh > /dev/null 2>&1; then
+# Starship
+if command -v starship > /dev/null 2>&1; then
     case "$shell_name" in
-        zsh)
-            eval "$(oh-my-posh init "$shell_name" --config "$HOME/.config/oh-my-posh/zen.omp.toml")"
-            ;;
-        bash)
-            if [ "${BASH_VERSINFO:-0}" -ge 4 ]; then
-                eval "$(oh-my-posh init "$shell_name" --config "$HOME/.config/oh-my-posh/zen.omp.toml")"
-            fi
+        bash|zsh)
+            eval "$(starship init "$shell_name")"
             ;;
     esac
 fi

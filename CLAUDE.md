@@ -29,26 +29,27 @@ chezmoi doctor                # diagnose environment issues
 
 `.chezmoi.toml.tmpl` prompts for one variable at `chezmoi init` time:
 
-- **`has_sudo`** (bool) — stored in `~/.config/chezmoi/chezmoi.toml` after first init; controls whether the install script runs `apt install` or just prints a manual package list.
+- **`has_sudo`** (bool) — stored in `~/.config/chezmoi/chezmoi.toml` after first init; on Linux, controls whether the install script bootstraps Homebrew (Linuxbrew) or just prints a manual package list. macOS always installs via Homebrew regardless of this value.
 
 Template variables available in `.tmpl` files:
 - `.chezmoi.os` — `"darwin"` or `"linux"`
 - `.has_sudo` — from the prompt above
 
-Files that use templates: `config.fish.tmpl`, `run_once_install-packages.sh.tmpl`.
+Files that use templates: `config.fish.tmpl`, `run_once_after_install-packages.sh.tmpl`.
 
 Shell fallback files:
 - `dot_bashrc` -> `~/.bashrc`
 - `dot_zshrc` -> `~/.zshrc`
-- `dot_shell_common` -> `~/.shell_common`, sourced by both bash and zsh for shared PATH, aliases, zoxide, oh-my-posh, and Rust setup
+- `dot_shell_common` -> `~/.shell_common`, sourced by both bash and zsh for shared PATH, aliases, zoxide, starship, and Rust setup
 
 ## Install script behaviour
 
-`run_once_install-packages.sh.tmpl` is rendered and run once per machine:
-- **macOS** — installs Homebrew if missing, then installs all packages via `brew`
-- **Linux, `has_sudo = true`** — installs via `apt`
+`run_once_after_install-packages.sh.tmpl` runs after all files are applied (so `fish_plugins` exists first) and once per machine. Both platforms use the same Homebrew package list (`BREW_DEPS`), so there's no per-OS package name skew (e.g. `fd` vs `fd-find`, `bat` vs `batcat`):
+- **macOS** — installs Homebrew if missing (to `/opt/homebrew` or `/usr/local`), then installs all packages via `brew`
+- **Linux, `has_sudo = true`** — installs Homebrew if missing (to `/home/linuxbrew/.linuxbrew`; the initial bootstrap needs sudo), then installs all packages via `brew`
 - **Linux, `has_sudo = false`** — skips installation, prints the package list
+- **all platforms** — installs [fisher](https://github.com/jorgebucaran/fisher) if missing, then runs `fisher update` to install the plugins listed in `fish_plugins`
 
-## macOS-specific config
+## OS-specific config
 
-Anything touching `/opt/homebrew` is wrapped in `{{ if eq .chezmoi.os "darwin" }}` in the template files. On Linux, Homebrew paths are omitted. Tmux does not set `default-shell`; it uses tmux's default behavior based on the shell environment when the server starts.
+Template files branch on `{{ if eq .chezmoi.os "darwin" }}` to pick the right Homebrew prefix: `/opt/homebrew` (or `/usr/local`) on macOS, `/home/linuxbrew/.linuxbrew` on Linux. `dot_shell_common` checks for both prefixes at runtime (`[ -d ... ]`) instead of using a template conditional, since it's not rendered by chezmoi. Tmux does not set `default-shell`; it uses tmux's default behavior based on the shell environment when the server starts.

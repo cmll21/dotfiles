@@ -17,7 +17,7 @@ functions -e fish_mode_prompt
 {{ if eq .chezmoi.os "darwin" -}}
 set -x PATH /opt/homebrew/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin $HOME/.local/bin
 {{- else -}}
-set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin $HOME/.local/bin
+set -x PATH /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/sbin /usr/local/bin /usr/bin /bin /usr/sbin /sbin $HOME/.local/bin
 {{- end }}
 
 # Setup Rust
@@ -29,10 +29,13 @@ set -x EDITOR nvim
 # Set greeting
 set fish_greeting # "Welcome back, $(whoami)! Today is $(date '+%A, %B %d, %Y')."
 
-# C headers and libs (macOS/Homebrew only)
+# C headers and libs (Homebrew only)
 {{ if eq .chezmoi.os "darwin" -}}
 set -x CPATH /opt/homebrew/include $CPATH
 set -x LIBRARY_PATH /opt/homebrew/lib $LIBRARY_PATH
+{{- else -}}
+set -x CPATH /home/linuxbrew/.linuxbrew/include $CPATH
+set -x LIBRARY_PATH /home/linuxbrew/.linuxbrew/lib $LIBRARY_PATH
 {{- end }}
 
 # NVM — Use Fish-native plugin instead of Bash scripts
@@ -45,16 +48,19 @@ if command -q zoxide
 end
 
 # Theme
-fish_config theme choose catppuccin-mocha --color-theme=dark
+fish_config theme choose catppuccin-mocha
 
 # Prompt
 starship init fish | source
 
 # Aliases
-alias c='claude'
-if command -q zoxide
-    alias cd='z'
-end
+abbr -a c claude
+abbr -a ta 'tmux attach -t'
+abbr -a tad 'tmux attach -d -t'
+abbr -a ts 'tmux new-session -s'
+abbr -a tl 'tmux list-sessions'
+abbr -a tksv 'tmux kill-server'
+abbr -a tkss 'tmux kill-session -t'
 if command -q eza
     alias ls='eza --icons --group-directories-first --color=always'
     alias ll='eza -lh --icons --group-directories-first --git'
