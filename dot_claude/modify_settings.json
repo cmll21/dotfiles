@@ -1,0 +1,26 @@
+#!/bin/bash
+# Set only the statusLine key in ~/.claude/settings.json; keep everything else
+# (autoMode etc. is machine-specific and must not be committed to this public repo).
+current=$(cat)
+[ -z "$current" ] && current='{}'
+
+if command -v jq >/dev/null 2>&1; then
+  printf '%s' "$current" | jq '.statusLine = {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh",
+    "padding": 0
+  }'
+elif [ "$current" = '{}' ]; then
+  cat <<'JSON'
+{
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh",
+    "padding": 0
+  }
+}
+JSON
+else
+  # No jq to merge safely: leave the existing file untouched
+  printf '%s' "$current"
+fi

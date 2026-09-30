@@ -53,3 +53,7 @@ Shell fallback files:
 ## OS-specific config
 
 Template files branch on `{{ if eq .chezmoi.os "darwin" }}` to pick the right Homebrew prefix: `/opt/homebrew` (or `/usr/local`) on macOS, `/home/linuxbrew/.linuxbrew` on Linux. `dot_shell_common` checks for both prefixes at runtime (`[ -d ... ]`) instead of using a template conditional, since it's not rendered by chezmoi. Tmux does not set `default-shell`; it uses tmux's default behavior based on the shell environment when the server starts.
+
+## Claude Code config
+
+`dot_claude/statusline-command.sh` is managed directly. `~/.claude/settings.json` is **not** — it holds machine- and project-specific data (e.g. `autoMode`) and this repo is public. `dot_claude/modify_settings.json` sets only the `statusLine` key (via `jq`, or writes a minimal file if none exists) and leaves the rest of the file alone.

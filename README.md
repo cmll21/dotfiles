@@ -35,3 +35,4 @@ and the plugins listed in `fish_plugins`:
 - make
 - [tmux](https://github.com/tmux/tmux)
 - [starship](https://github.com/starship/starship)
+- [jq](https://github.com/jqlang/jq)
