@@ -1,0 +1,13 @@
+#!/bin/bash
+# Set only prStatusFooterEnabled in ~/.claude.json (hides the footer's PR badge);
+# the rest is Claude Code's own machine state and must not be committed.
+current=$(cat)
+[ -z "$current" ] && current='{}'
+
+if command -v jq >/dev/null 2>&1; then
+  # No trailing newline, matching how Claude Code writes the file
+  printf '%s' "$(printf '%s' "$current" | jq '.prStatusFooterEnabled = false')"
+else
+  # No jq to merge safely: leave the existing file untouched
+  printf '%s' "$current"
+fi

@@ -57,3 +57,7 @@ Template files branch on `{{ if eq .chezmoi.os "darwin" }}` to pick the right Ho
 ## Claude Code config
 
 `dot_claude/statusline-command.sh` is managed directly. `~/.claude/settings.json` is **not** — it holds machine- and project-specific data (e.g. `autoMode`) and this repo is public. `dot_claude/modify_settings.json` sets only the `statusLine` key (via `jq`, or writes a minimal file if none exists) and leaves the rest of the file alone.
+
+`~/.claude.json` is Claude Code's own machine state and is likewise not managed. `modify_private_dot_claude.json` sets only `prStatusFooterEnabled = false` (the statusline shows the PR instead) and keeps the file's 600 mode.
+
+The statusline's first line is the first line of the real starship prompt (`starship prompt --path`), so it follows `starship.toml`; the second line is model, effort, context, rate limits and cost.

@@ -6,3 +6,7 @@
 .viminfo
 .config/nvim/lazy-lock.json
 **/*.bak
+
+# Repo docs, not dotfiles
+README.md
+CLAUDE.md
